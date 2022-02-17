@@ -1,3 +1,5 @@
+package pojos;
+
 import java.util.Objects;
 
 public class Player {
@@ -57,7 +59,7 @@ public class Player {
     // Overrides the toString method
     @Override
     public String toString() {
-        return "Player{" +
+        return "pojos.Player{" +
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", number=" + number +
