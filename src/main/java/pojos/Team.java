@@ -23,6 +23,7 @@ public class Team {
     public Team(String name, Manager manager) {
         this.name = name;
         this.manager = manager;
+        this.players = new Player[15];
     }
 
     // Getters & Setters
