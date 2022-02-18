@@ -20,9 +20,14 @@ public class Team {
     // Constructor
     // Only need to pass in name and manager properties
     // This is because when we create a new team, we don't have any players yet, whereas the team name and manager are known
+    // (i.e. Every team needs to start with an array of players, and will not have any players to begin with - so we don't pass players in)
     public Team(String name, Manager manager) {
+        // Name will be different for each time
         this.name = name;
+        // Manager will be different for each team
         this.manager = manager;
+        // Each team will have 15 players in it, and it starts empty
+        // We create in the constructor, and then use a service class to populate it
         this.players = new Player[15];
     }
 
