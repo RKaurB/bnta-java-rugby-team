@@ -1,4 +1,4 @@
-package pojos;
+package managers;
 
 import java.util.Objects;
 

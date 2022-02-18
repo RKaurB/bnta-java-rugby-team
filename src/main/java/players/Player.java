@@ -1,4 +1,4 @@
-package pojos;
+package players;
 
 import java.util.Objects;
 
