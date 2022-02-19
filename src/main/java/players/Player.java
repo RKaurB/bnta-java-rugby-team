@@ -59,7 +59,7 @@ public class Player {
     // Overrides the toString method
     @Override
     public String toString() {
-        return "pojos.Player{" +
+        return "Player{" +
                 "name='" + name + '\'' +
                 ", position='" + position + '\'' +
                 ", number=" + number +
