@@ -53,11 +53,12 @@ public class TeamService {
 //        }
 //        return count;
 
-        }
+    }
 
     // Method takes a team and a player, and returns void
     // Check if space on team, and if yes then add the player
-    public void addPlayerToTeam(Team team, Player player) {
+    // (Add Exception, in event that team is full and no more space to add a player)
+    public void addPlayerToTeam(Team team, Player player) throws Exception {
         // Store result of the countEmptySpacesOnTeam method into a variable (i.e., calculated number of empty spaces on the team)
         int spaces = countEmptySpacesOnTeam(team);
         // If at least one space on team, then add player
@@ -74,14 +75,13 @@ public class TeamService {
                     // Then break out of the loop
                     break;
                 }
-
             }
         }
-
-
-
+        else {
+            // throw new Exception();
+            throw new IllegalStateException("Team is full.");
+        }
     }
-
 
 
 }

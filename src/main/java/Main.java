@@ -46,7 +46,33 @@ public class Main {
         int spacesBefore = teamService.countEmptySpacesOnTeam(scotland);
         System.out.println("Empty spaces on Scotland team before adding player: " + spacesBefore);
         // ADD PLAYER TO SCOTLAND TEAM (USING THE ADDPLAYERTOTEAM METHOD IN TEAM SERVICE)
-        teamService.addPlayerToTeam(scotland, player);
+        // Surround with try/catch - see thrown Exception in TeamService addPlayerToTeam method
+        // Allows the end user to see something went wrong, and why it went wrong - the program catches the exception and keeps running
+        try {
+            teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+            // teamService.addPlayerToTeam(scotland, player);
+        } catch (Exception e) {
+            // Printing the stack trace can be useful, as won't always be the thing you immediately try that's the problem
+            // Tells us which parts in the process have gone wrong
+            // e.printStackTrace();
+            // System.out.println("Team is full.");
+            System.out.println(e.getMessage());
+
+        }
         // PRINT NUMBER OF EMPTY SPACES ON SCOTLAND TEAM AFTER ADDING A PLAYER
         int spacesAfter = teamService.countEmptySpacesOnTeam(scotland);
         System.out.println("Empty spaces on Scotland team after adding player: " + spacesAfter);
