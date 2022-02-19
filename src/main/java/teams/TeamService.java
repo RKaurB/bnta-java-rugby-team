@@ -40,13 +40,46 @@ public class TeamService {
         return count;
 
 //        // Alternate for(i) loop
+//        // (The for(i) loop gives us much finer control re how the loop works. However, the for each (enhanced) loop is preferred/easier here, as above!)
+//        // PlayersOnTheTeam variable stores what we get back from team.getPlayers() - returns a Player array
 //        Player[] playersOnTheTeam = team.getPlayers();
+//        // How many spots are in the array?
+//        // For each individual index (i) in this array...
 //        for (int i = 0; i < team.getPlayers().length; i++) {
 //            if ([playersOnTheTeam[i] == null]){
+//                // if null, increment the count
 //                count++;
 //            }
 //        }
 //        return count;
+
+        }
+
+    // Method takes a team and a player, and returns void
+    // Check if space on team, and if yes then add the player
+    public void addPlayerToTeam(Team team, Player player) {
+        // Store result of the countEmptySpacesOnTeam method into a variable (i.e., calculated number of empty spaces on the team)
+        int spaces = countEmptySpacesOnTeam(team);
+        // If at least one space on team, then add player
+        if (spaces > 0) {
+            // Get player array from the team and store in players variable - getPlayers() gives us the full array, including nulls
+            Player[] players = team.getPlayers();
+            // Add player to first available empty space
+            // Loop through players array (need for(i) loop here)
+            for (int i = 0; i < players.length; i++) {
+                // If we find an empty space (null) in the array
+                if (players[i] == null) {
+                    // Add the player into that empty space
+                    players[i] = player;
+                    // Then break out of the loop
+                    break;
+                }
+
+            }
+        }
+
+
+
     }
 
 
